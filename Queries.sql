@@ -1,4 +1,4 @@
--- window function query
+-- Window Function query
 SELECT
     Product_ID,
     Region,
@@ -9,7 +9,7 @@ FROM
 GROUP BY
     Product_ID, Region;
 
--- Example of a Common Table Expression (CTE)
+-- Common Table Expression (CTE)
 WITH MonthlySales AS (
     SELECT
         DATE_TRUNC('month', Transaction_Date) AS Month,
@@ -28,7 +28,7 @@ ORDER BY
     Month;
 
 
--- stored procedure to calculate monthly sales
+-- Stored Procedure to calculate monthly sales
 DELIMITER $$
 
 CREATE PROCEDURE GenerateMonthlyReport()
